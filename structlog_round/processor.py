@@ -63,7 +63,7 @@ class FloatRounder:
         for key, value in event_dict.items():
             if self.only_fields is not None and key not in self.only_fields:
                 continue
-            if key in self.not_fields:
+            if self.not_fields is not None and key in self.not_fields:
                 continue
             if isinstance(value, bool):
                 continue  # don't convert True to 1.0
