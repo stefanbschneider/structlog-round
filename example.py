@@ -9,5 +9,7 @@ structlog.configure(
 )
 log = structlog.get_logger()
 
-
-log.msg("Important logging", a=1/3, b=2/3)
+a = 1/3
+b = 2/3
+log.msg("Hello world", a=a, b=b)
+print(a, b)
