@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 setup(
     name='structlog-round',
     author='Stefan Schneider',
-    version=0.1,
+    version=1.0,
     description="A light-weight structlog processor to round floats for prettier logging.",
     long_description=long_description,
     long_description_content_type="text/markdown",

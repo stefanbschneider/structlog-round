@@ -11,19 +11,17 @@ Logging floats easily bloats your logs through many floating point digits?
 For example:
 
 ```python
-log.msg("Important logging", a=1/3, b=2/3)
+log.msg("Hello world", a=1/3, b=2/3, ab_list=[1/3, 2/3])
 
 # without structlog-round: prints long and ugly floats
-# 2020-07-16 21:48.21 Important logging              a=0.3333333333333333 b=0.6666666666666666
+# 2020-07-16 21:48.21 Hello world        a=0.3333333333333333 b=0.6666666666666666 ab_list=[0.3333333333333333, 0.6666666666666666]
 
 # with structlog-round: floats are logged nicely rounded
-# 2020-07-16 21:48.21 Important logging              a=0.333 b=0.667
+# 2020-07-16 21:48.21 Hello world        a=0.333 b=0.667 ab_list=[0.333, 0.667]
 ```
 
-Easier to read:
-
-
-
+`structlog-round` lets you configure how floats are rounded and also supports rounding floats in (nested) lists, dicts, or `numpy` arrays.
+ 
 ## Install
 
 ```
