@@ -1,3 +1,5 @@
+![Python CI](https://github.com/stefanbschneider/structlog-round/workflows/Python%20CI/badge.svg)
+
 # structlog-round
 
 A simple and light-weight [`structlog`](https://github.com/hynek/structlog) processor to round floats for prettier logging.
