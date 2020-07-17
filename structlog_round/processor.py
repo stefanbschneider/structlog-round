@@ -23,14 +23,20 @@ class FloatRounder:
         """
         self.digits = digits
         self.np_array_to_list = np_array_to_list
-        try:
+        # convert lists to sets for faster checking
+        if only_fields is None:
+            self.only_fields = only_fields
+        elif type(only_fields) in (set, list):
             self.only_fields = set(only_fields)
-        except TypeError:
-            self.only_fields = None
-        try:
+        else:
+            raise TypeError(f"only_fields has to be a set or a list but was {only_fields}")
+
+        if not_fields is None:
+            self.not_fields = not_fields
+        elif type(not_fields) in (set, list):
             self.not_fields = set(not_fields)
-        except TypeError:
-            self.not_fields = None
+        else:
+            raise TypeError(f"not_fields has to be a set or a list but was {not_fields}")
 
     def _round(self, value):
         """
