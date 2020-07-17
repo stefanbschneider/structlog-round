@@ -1,4 +1,4 @@
-![Python CI](https://github.com/stefanbschneider/structlog-round/workflows/Python%20CI/badge.svg)
+![Python CI](https://github.com/stefanbschneider/structlog-round/workflows/Python%20CI/badge.svg?branch=master)
 
 # structlog-round
 
@@ -27,7 +27,16 @@ Easier to read:
 ## Install
 
 ```
+pip install structlog-round
+```
+
+Or for development:
+
+```
+git clone git@github.com:stefanbschneider/structlog-round.git
 python setup.py install
+# dependencies for testing
+pip install -e .[dev]
 ```
 
 ## Usage
